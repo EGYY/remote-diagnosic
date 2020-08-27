@@ -1,0 +1,10 @@
+.pay-img {
+    padding: 10px;
+
+    border-radius: 10px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.3);
+}
+
+.pay-img img {
+    width: 250px;
+}

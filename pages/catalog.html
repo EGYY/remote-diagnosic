@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/catalog.css">
+    <title>Document</title>
+</head>
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap  shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">Remote diagnostic</a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse"
+            data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <form class="form-inline w-100">
+        <input class="form-control form-control-dark w-75 my-2 mr-sm-2" type="search" placeholder="Начните поиск..."
+               aria-label="Начните поиск...">
+        <button class="btn btn-outline-success w-20 my-2 my-sm-0" type="submit">Найти</button>
+    </form>
+
+    <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+            <a class="nav-link" href="auth.html">Вход/Регистрация</a>
+        </li>
+    </ul>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+            <div class="sidebar-sticky pt-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="../index.html">
+                            <i class="material-icons">home</i>
+                            <div>Главная</div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center active" href="catalog.html">
+                            <i class="material-icons">import_contacts</i>
+                            <div>Каталог</div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="about.html">
+                            <i class="material-icons">contact_support</i>
+                            <div>О нас</div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center " href="contact.html">
+                            <i class="material-icons">mail</i>
+                            <div>Контакты</div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="payment.html">
+                            <i class="material-icons">payment</i>
+                            Оплата
+                        </a>
+                    </li>
+
+                </ul>
+
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                    <span>Saved reports</span>
+                    <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+                        <i class="material-icons">add_circle_outline</i>
+                    </a>
+                </h6>
+                <ul class="nav flex-column mb-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="file-text"></span>
+                            Current month
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="file-text"></span>
+                            Last quarter
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="file-text"></span>
+                            Social engagement
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="file-text"></span>
+                            Year-end sale
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 p-10 p-md-5">
+            <h1 class="display-4 d-flex justify-content-center">Каталог</h1>
+            <select class="form-control" id="sel1">
+                <option value="all">Все</option>
+                <option value="UA">Американские</option>
+                <option value="EU">Европейские</option>
+                <option value="CH">Китайские</option>
+                <option value="RU">Российские</option>
+                <option value="CO">Корейские</option>
+                <option value="JAP">Японские</option>
+            </select>
+
+            <div id="catalog" class="row catalog-brands p-md-2"></div>
+        </main>
+    </div>
+</div>
+
+<a class="contact-btn" href="https://t.me/zhopagiveme5" target="_blank">
+    <span class="material-icons">
+        chat
+    </span>
+</a>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+
+</script>
+
+<script type="application/javascript">
+    let selector = document.getElementById('sel1');
+    let catalog = document.getElementById('catalog')
+    let marksForFunc = [
+        {
+            id: 1, brandName: 'Audi', country: 'EU',
+        },
+        {
+            id: 2, brandName: 'Bmw', country: 'CH',
+        },
+        {
+            id: 3, brandName: 'Chery', country: 'DE'
+        },
+        {
+            id: 4, brandName: 'Chevrolet', country: 'CO'
+        },
+        {
+            id: 5, brandName: 'Chrysler', country: 'CO'
+        },
+        {
+            id: 6, brandName: 'Citroen', country: 'DE'
+        },
+        {
+            id: 7, brandName: 'Daewoo', country: 'EU'
+        },
+        {
+            id: 8, brandName: 'Dodge', country: 'DE'
+        },
+        {
+            id: 9, brandName: 'Extreme moto', country: 'DE'
+        },
+        {
+            id: 10, brandName: 'Fiat', country: 'DE'
+        },
+        {
+            id: 11, brandName: 'Ford', country: 'EU'
+        },
+        {
+            id: 12, brandName: 'Geely', country: 'CH'
+        },
+        {
+            id: 13, brandName: 'Great Wall', country: 'DE'
+        },
+        {
+            id: 14, brandName: 'Haval', country: 'DE'
+        },
+        {
+            id: 15, brandName: 'Hino', country: 'EU'
+        },
+        {
+            id: 16, brandName: 'Honda', country: 'DE'
+        },
+        {
+            id: 17, brandName: 'Hyundai', country: 'EU'
+        },
+        {
+            id: 18, brandName: 'Infiniti', country: 'CH'
+        },
+        {
+            id: 19, brandName: 'Jaguar', country: 'CO'
+        },
+        {
+            id: 20, brandName: 'Kia', country: 'CH'
+        },
+        {
+            id: 21, brandName: 'Land Rover', country: 'DE'
+        },
+        {
+            id: 22, brandName: 'Lexus', country: 'JAP'
+        },
+        {
+            id: 23, brandName: 'Mazda', country: 'DE'
+        },
+        {
+            id: 24, brandName: 'Mercedes-Benz', country: 'DE'
+        },
+        {
+            id: 25, brandName: 'Mitsubishi', country: 'DE'
+        },
+        {
+            id: 26, brandName: 'Nissan', country: 'JAP'
+        },
+        {
+            id: 27, brandName: 'Opel', country: 'DE'
+        },
+        {
+            id: 28, brandName: 'Peugeot', country: 'DE'
+        },
+        {
+            id: 29, brandName: 'Porsche', country: 'JAP'
+        },
+        {
+            id: 30, brandName: 'Renault', country: 'DE'
+        }
+
+    ];
+
+    const getMarks = (marks, e) => {
+        switch (e.target.value) {
+            case 'all':
+                return marks;
+
+            case 'DE':
+                return marks = marks.filter(item => item.country === e.target.value);
+
+            case 'JAP':
+                return marks = marks.filter(item => item.country === e.target.value);
+
+            case 'CH':
+                return marks = marks.filter(item => item.country === e.target.value);
+
+            case 'UA':
+                return marks = marks.filter(item => item.country === e.target.value);
+
+            default:
+                return marks
+        }
+    }
+
+    const getGroupedMarks = (marks) => {
+        catalog.innerHTML = ''
+        let data = marks.reduce((r, e) => {
+            let group = e.brandName[0];
+
+            if (!r[group]) r[group] = {group, children: [e]}
+            else r[group].children.push(e);
+            return r;
+        }, {})
+
+        let result = Object.values(data);
+
+        for (let i in result) {
+            let div = document.createElement('div')
+            div.innerHTML += `<b>${result[i].group}</b>`
+            for (let j in result[i].children) {
+                div.innerHTML += `<div class="row d-flex flex-column"><a href="#">${result[i].children[j].brandName}</a></div>`;
+            }
+
+            catalog.innerHTML += div.innerHTML
+        }
+    }
+
+
+    selector.addEventListener('change', (e) => {
+        const content = getMarks(marksForFunc, e)
+        getGroupedMarks(content)
+    });
+
+
+    getGroupedMarks(marksForFunc)
+
+</script>
+</body>
+</html>
