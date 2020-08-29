@@ -78,6 +78,14 @@ a:hover, a:focus, a:active {
     color: #e2871a!important;
 }
 
+#main-bg {
+    background: url(https://img3.goodfon.ru/original/2560x1440/a/18/bmw-m3-e92-orange-1911.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    color: #fff;
+}
+
 .feather {
     width: 16px;
     height: 16px;
@@ -255,6 +263,28 @@ a:hover, a:focus, a:active {
     height: 100%;
     width: 100%;
 
+}
+
+.user_name{
+    font-size:14px;
+    font-weight: bold;
+}
+.comments-list .media{
+    border-bottom: 1px dotted #ccc;
+}
+
+.media-left span.material-icons {
+    font-size: 35px!important;
+}
+.media-body span.material-icons {
+    font-size: 15px!important;
+}
+
+.detail-info {
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    margin-bottom: 25px;
 }
 
 .contact-btn:hover, .contact-btn:focus, .contact-btn:active {
