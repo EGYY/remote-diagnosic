@@ -78,6 +78,12 @@ a:hover, a:focus, a:active {
     color: #e2871a!important;
 }
 
+main{
+    height: auto;
+    min-height: 100vh;
+    /*overflow: auto;*/
+}
+
 #main-bg {
     background: url(https://img3.goodfon.ru/original/2560x1440/a/18/bmw-m3-e92-orange-1911.jpg);
     background-size: cover;
@@ -264,7 +270,17 @@ a:hover, a:focus, a:active {
     width: 100%;
 
 }
+.btn-outline-secondary {
+    background-color:#f7941e;
+    color: #fff!important;
+    border: none;
+}
 
+.btn-outline-secondary:hover, .btn-outline-secondary:focus, .btn-outline-secondary:active {
+    background-color: #fff;
+
+
+}
 .user_name{
     font-size:14px;
     font-weight: bold;
@@ -285,6 +301,10 @@ a:hover, a:focus, a:active {
     border-radius: 10px;
     background-color: #f8f9fa;
     margin-bottom: 25px;
+}
+
+footer {
+    background: #f8f9fa;
 }
 
 .contact-btn:hover, .contact-btn:focus, .contact-btn:active {
