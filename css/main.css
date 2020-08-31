@@ -118,6 +118,10 @@ main{
     .sidebar {
         top: 5rem;
     }
+
+    .sidebar-sticky {
+        top: 150px!important;
+    }
 }
 
 .sidebar-sticky {
