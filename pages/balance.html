@@ -10,12 +10,13 @@
           rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/balance.css">
     <link rel="stylesheet" href="../css/main.css">
 
     <title>Document</title>
 </head>
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap  shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">Remote diagnostic</a>
+    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="../index.html">Remote diagnostic</a>
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse"
             data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -100,12 +101,44 @@
             </div>
         </nav>
 
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 p-10 p-md-5 text-center ">
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 p-10">
+            <div class="head p-md-4">
+                <h5 class="text-muted">Баланс счета</h5>
+                <div class="head__balance">
+                    <b>0.00 ₽</b>
+                </div>
+            </div>
+            <div class="balance p-md-4">
+                <h5><b>Пополнение счета</b></h5>
+                <div class="fix-pay">
+                    <h6 class="text-muted">Фиксированный платеж</h6>
+                    <div class="fix-pay__items">
+                        <div class="fix-pay__item">
+                            100
+                        </div>
+                        <div class="fix-pay__item">
+                            500
+                        </div>
+                        <div class="fix-pay__item">
+                            1000
+                        </div>
+                        <div class="fix-pay__item">
+                            2000
+                        </div>
+                    </div>
+                </div>
 
+                <div class="balance__form">
+                    <form action="">
+                        <h6 class="text-muted">Сумма</h6>
+                        <div class="balance__input">
+                            <input id='input-balance' type="number" placeholder="Введите сумму"> <span>₽</span>
+                            <input type="submit" value="Продолжить">
+                        </div>
+                    </form>
+                </div>
 
-            <h1>Баланс</h1>
-            <h3>0 ₽</h3>
-            <h4><a href="#">Пополнить баланс</a></h4>
+            </div>
 
 
         </main>
@@ -141,19 +174,19 @@
 
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#!">Главная</a>
+                        <a href="../index.html">Главная</a>
                     </li>
                     <li>
-                        <a href="#!">Каталог</a>
+                        <a href="./catalog.html">Каталог</a>
                     </li>
                     <li>
-                        <a href="#!">О нас</a>
+                        <a href="./about.html">О нас</a>
                     </li>
                     <li>
-                        <a href="#!">Контакты</a>
+                        <a href="./contact.html">Контакты</a>
                     </li>
                     <li>
-                        <a href="#!">Оплата</a>
+                        <a href="./payment.html">Оплата</a>
                     </li>
                 </ul>
 
@@ -184,7 +217,7 @@
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2020 Copyright:
-        <a href="#"> Remote diagnostic</a>
+        <a href="/"> Remote diagnostic</a>
     </div>
     <!-- Copyright -->
 
@@ -194,6 +227,15 @@
         chat
     </span>
 </a>
+<script>
+    const item = document.querySelector('.fix-pay__items')
+    const balanceInput = document.querySelector('#input-balance')
+    item.addEventListener('click', (e) => {
+        if (e.target !== item) {
+            balanceInput.value = +e.target.innerText
+        }
+    })
+</script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -207,7 +249,6 @@
 <script type="application/javascript">
     $(function () {
         $('[data-toggle="popover"]').popover({
-            trigger: 'focus',
             html: true,
             content: function () {
                 return $('#popover-content').html();
