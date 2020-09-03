@@ -28,8 +28,13 @@
 
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-            <a class="nav-link" href="auth.html">Вход/Регистрация</a>
+            <button type="button " class="btn text-light" data-toggle="popover" title="Профиль">egghack@ya.ru</button>
         </li>
+    </ul>
+    <ul id="popover-content" class="list-group" style="display: none">
+        <a href="orders.html" class="list-group-item d-flex align-items-center justify-content-center text-decoration-none"><i class="material-icons">import_contacts</i> Заказы</a>
+        <a href="balance.html" class="list-group-item d-flex align-items-center justify-content-center text-decoration-none"><i class="material-icons">payment</i> Баланс</a>
+        <a href="coupons.html" class="list-group-item d-flex align-items-center justify-content-center text-decoration-none"><i class="material-icons">contact_support</i> Купоны</a>
     </ul>
 </nav>
 <div class="container-fluid">
@@ -58,7 +63,7 @@
                     <li class="nav-item">
                         <a class="nav-link d-flex align-items-center active" href="contact.html">
                             <i class="material-icons">mail</i>
-                            <div>Контакты <span class="sr-only">(current)</span></div>
+                            <div>Контакты</div>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -262,6 +267,17 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 
+<script type="application/javascript">
+    $(function() {
+        $('[data-toggle="popover"]').popover({
+            // trigger: 'focus',
+            html: true,
+            content: function() {
+                return $('#popover-content').html();
+            }
+        });
+    })
 
+</script>
 </body>
 </html>
