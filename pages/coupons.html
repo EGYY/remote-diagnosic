@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
-
+    <link rel="stylesheet" href="../css/coupons.css">
     <title>Document</title>
 </head>
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap  shadow">
@@ -28,13 +28,8 @@
 
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-            <button type="button " class="btn text-light" data-toggle="popover" title="Профиль">egghack@ya.ru</button>
+            <a class="nav-link" href="auth.html">Вход/Регистрация</a>
         </li>
-    </ul>
-    <ul id="popover-content" class="list-group" style="display: none">
-        <a href="orders.html" class="list-group-item d-flex align-items-center justify-content-center text-decoration-none"><i class="material-icons">import_contacts</i> Заказы</a>
-        <a href="balance.html" class="list-group-item d-flex align-items-center justify-content-center text-decoration-none"><i class="material-icons">payment</i> Баланс</a>
-        <a href="coupons.html" class="list-group-item d-flex align-items-center justify-content-center text-decoration-none"><i class="material-icons">contact_support</i> Купоны</a>
     </ul>
 </nav>
 <div class="container-fluid">
@@ -61,9 +56,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center " href="contact.html">
+                        <a class="nav-link d-flex align-items-center active" href="contact.html">
                             <i class="material-icons">mail</i>
-                            <div>Контакты </div>
+                            <div>Контакты <span class="sr-only">(current)</span></div>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -96,9 +91,79 @@
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 p-10 p-md-5">
-
-
-        Авторизованный хедер
+            <h1 class="display-4 d-flex justify-content-center">Ваши купоны</h1>
+            <div class="coupons d-flex flex-column">
+                <div class="coupon">
+                    <div class="container">
+                        <h3>Remote diagnostic</h3>
+                    </div>
+                    <div class="container" style="background-color:white">
+                        <h2><b>20% Скидка на заказ</b></h2>
+                        <p>Lorem ipsum..</p>
+                    </div>
+                    <div class="container">
+                        <p>Промо код: <span class="promo">BOH232</span></p>
+                        <p class="expire">Истекает: Июнь 03, 2021</p>
+                    </div>
+                </div>
+                <div class="coupon">
+                    <div class="container">
+                        <h3>Remote diagnostic</h3>
+                    </div>
+                    <div class="container" style="background-color:white">
+                        <h2><b>20% Скидка на заказ</b></h2>
+                        <p>Lorem ipsum..</p>
+                    </div>
+                    <div class="container">
+                        <p>Промо код: <span class="promo">BOH232</span></p>
+                        <p class="expire">Истекает: Июнь 03, 2021</p>
+                    </div>
+                </div>
+                <div class="coupon">
+                    <div class="container">
+                        <h3>Remote diagnostic</h3>
+                    </div>
+                    <div class="container" style="background-color:white">
+                        <h2><b>20% Скидка на заказ</b></h2>
+                        <p>Lorem ipsum..</p>
+                    </div>
+                    <div class="container">
+                        <p>Промо код: <span class="promo">BOH232</span></p>
+                        <p class="expire">Истекает: Июнь 03, 2021</p>
+                    </div>
+                </div>
+                <div class="coupon">
+                    <div class="container">
+                        <h3>Remote diagnostic</h3>
+                    </div>
+                    <div class="container" style="background-color:white">
+                        <h2><b>20% Скидка на заказ</b></h2>
+                        <p>Lorem ipsum..</p>
+                    </div>
+                    <div class="container">
+                        <p>Промо код: <span class="promo">BOH232</span></p>
+                        <p class="expire">Истекает: Июнь 03, 2021</p>
+                    </div>
+                </div>
+                <div class="coupon">
+                    <div class="container">
+                        <h3>Remote diagnostic</h3>
+                    </div>
+                    <div class="container" style="background-color:white">
+                        <h2><b>20% Скидка на заказ</b></h2>
+                        <p>Lorem ipsum..</p>
+                    </div>
+                    <div class="container">
+                        <p>Промо код: <span class="promo">BOH232</span></p>
+                        <p class="expire">Истекает: Июнь 03, 2021</p>
+                    </div>
+                </div>
+                <div class="coupon__btn d-flex justify-content-center">
+                    <button class="btn btn-outline-success w-20 my-2 my-sm-0">
+                        Загрузить ещё
+                    </button>
+                </div>
+            </div>
 
 
         </main>
@@ -197,17 +262,6 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 
-<script type="application/javascript">
-    $(function() {
-        $('[data-toggle="popover"]').popover({
-            // trigger: 'focus',
-            html: true,
-            content: function() {
-                return $('#popover-content').html();
-            }
-        });
-    })
 
-</script>
 </body>
 </html>
