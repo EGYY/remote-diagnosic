@@ -312,6 +312,7 @@ main{
 }
 .comments-list .media{
     border-bottom: 1px dotted #ccc;
+    margin-top: 15px;
 }
 
 .media-left span.material-icons {
